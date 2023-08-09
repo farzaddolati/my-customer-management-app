@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = "sqlserver://192.168.1.7:1433;initial catalog=customer_db;user=sa;password=ifa123456sanat@;TrustServerCertificate=true;"
+}
+
+
+model Customer {
+  id       Int      @id @default(autoincrement())
+  name     String
+  email    String
+  address  String  
+}
